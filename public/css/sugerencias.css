@@ -1,0 +1,13 @@
+.sugerencias {
+    display: none;
+    color: #009688;
+    background-color: #ebedf2;
+    border-radius: 10px;
+}
+
+body.dark .sugerencias {
+    display: none;
+    color: #009688;
+    background-color: #060818;
+    border-radius: 10px;
+}

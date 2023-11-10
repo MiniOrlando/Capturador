@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Iniciar Sesión</title>
+    <link rel="icon" type="image/x-icon" href="./src/assets/img/MAB_Logo.png"/>
+    <link href="../layouts/vertical-dark-menu/css/light/loader.css" rel="stylesheet" type="text/css" />
+    <link href="../layouts/vertical-dark-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
+    <script src="../layouts/vertical-dark-menu/loader.js"></script>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="../layouts/vertical-dark-menu/css/light/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="../src/assets/css/light/authentication/auth-cover.css" rel="stylesheet" type="text/css" />
+    
+    <link href="../layouts/vertical-dark-menu/css/dark/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="../src/assets/css/dark/authentication/auth-cover.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+<body class="form">
+
+    <!-- BEGIN LOADER -->
+    <div id="load_screen"> <div class="loader"> <div class="loader-content">
+        <div class="spinner-grow align-self-center"></div>
+    </div></div></div>
+    <!--  END LOADER -->
+
+    <!-- BEGIN SWEET ALERT -->
+    <script type="text/javascript">
+        if ("<%= alert %>" === "true") {
+            var alertTitle = "<%= alertTitle %>";
+            var alertText = "<%= alertText %>";
+            var alertIcon = "<%= alertIcon %>";
+            Swal.fire({
+                title: alertTitle,
+                text: alertText,
+                icon: alertIcon,
+                button: "Ok",
+            });
+        }
+    </script>
+    <!-- END SWEET ALERT -->
+
+    <div class="auth-container d-flex">
+
+        <div class="container mx-auto align-self-center">
+    
+            <div class="row">
+    
+                <div class="col-6 d-lg-flex d-none h-100 my-auto top-0 start-0 text-center justify-content-center flex-column"> 
+                    <div class="auth-cover-bg-image"></div>
+                    <div class="auth-overlay"></div>
+                        
+                    <div class="auth-cover">
+    
+                        <div class="position-relative">
+                        <!--div class="text-center"-->
+    
+                            <!--img src="../src/assets/img/auth-cover.svg" alt="auth-img"-->
+                            <img src="../src/assets/img/MAB_Logo.png" alt="auth-img">
+    
+                            <h2 class="mt-5 text-white font-weight-bolder px-2">CAPTURADOR</h2>
+                            <h4 class="text-white px-2">Máximos y mínimos, pan, tortilla, frutas, rebajas</h4>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center ms-lg-auto me-lg-0 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+    
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    
+                                    <h2>Iniciar Sesión</h2>
+                                    <p>Ingresa tu usuario y contraseña de Merksyst</p>
+                                    
+                                </div>
+
+                                <form id="formLogin" action="/maxmin" method="POST">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Usuario</label>
+                                            <input type="text" class="form-control" id="user" name="user" title="usuario">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mb-4">
+                                            <label class="form-label">Contraseña</label>
+                                            <input type="password" class="form-control" id="password" name="password">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="mb-4">
+                                            <button class="btn btn-primary w-100" type="submit">INICIAR SESIÓN</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+    
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+</body>
+</html>
